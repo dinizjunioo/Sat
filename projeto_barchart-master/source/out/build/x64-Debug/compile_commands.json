@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.300\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I..\\..\\..\\core -I..\\..\\..\\libs /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\bcr.dir\\core\\main.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Diniz\\Music\\LP05\\projeto_barchart-master\\projeto_barchart-master\\source\\core\\main.cpp",
+  "file": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/core/main.cpp"
+},
+{
+  "directory": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.300\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I..\\..\\..\\core -I..\\..\\..\\libs /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\bcr.dir\\core\\bcr_am.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Diniz\\Music\\LP05\\projeto_barchart-master\\projeto_barchart-master\\source\\core\\bcr_am.cpp",
+  "file": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/core/bcr_am.cpp"
+},
+{
+  "directory": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.300\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I..\\..\\..\\core -I..\\..\\..\\libs /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\bcr.dir\\core\\barchart.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Diniz\\Music\\LP05\\projeto_barchart-master\\projeto_barchart-master\\source\\core\\barchart.cpp",
+  "file": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/core/barchart.cpp"
+},
+{
+  "directory": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug",
+  "command": "C:\\PROGRA~2\\MICROS~2\\2019\\COMMUN~1\\VC\\Tools\\MSVC\\1429~1.300\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -I..\\..\\..\\core -I..\\..\\..\\libs /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1 /FoCMakeFiles\\bcr.dir\\libs\\coms.cpp.obj /FdTARGET_COMPILE_PDB /FS -c C:\\Users\\Diniz\\Music\\LP05\\projeto_barchart-master\\projeto_barchart-master\\source\\libs\\coms.cpp",
+  "file": "C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/libs/coms.cpp"
+}
+]

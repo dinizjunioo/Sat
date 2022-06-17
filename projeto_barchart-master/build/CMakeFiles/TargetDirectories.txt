@@ -1,0 +1,3 @@
+/home/dinizrod/Imagens/projeto_barchart-master/build/CMakeFiles/bcr.dir
+/home/dinizrod/Imagens/projeto_barchart-master/build/CMakeFiles/edit_cache.dir
+/home/dinizrod/Imagens/projeto_barchart-master/build/CMakeFiles/rebuild_cache.dir

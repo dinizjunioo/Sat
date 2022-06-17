@@ -1,0 +1,3 @@
+C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug/CMakeFiles/bcr.dir
+C:/Users/Diniz/Music/LP05/projeto_barchart-master/projeto_barchart-master/source/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
