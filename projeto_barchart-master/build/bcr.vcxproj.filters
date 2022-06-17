@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Diniz\source\repos\Sat\projeto_barchart-master\source\core\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Diniz\source\repos\Sat\projeto_barchart-master\source\core\bcr_am.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Diniz\source\repos\Sat\projeto_barchart-master\source\core\barchart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Diniz\source\repos\Sat\projeto_barchart-master\source\libs\coms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Diniz\source\repos\Sat\projeto_barchart-master\source\core\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Diniz\source\repos\Sat\projeto_barchart-master\source\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C76C9082-AF7C-3C06-8C58-906F3E912F33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A78BB3F6-D164-3B0F-B3EC-7D46C622A5A3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

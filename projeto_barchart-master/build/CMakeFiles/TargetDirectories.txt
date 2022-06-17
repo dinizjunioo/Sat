@@ -1,3 +1,3 @@
-/home/dinizrod/Imagens/projeto_barchart-master/build/CMakeFiles/bcr.dir
-/home/dinizrod/Imagens/projeto_barchart-master/build/CMakeFiles/edit_cache.dir
-/home/dinizrod/Imagens/projeto_barchart-master/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Diniz/source/repos/Sat/projeto_barchart-master/build/CMakeFiles/bcr.dir
+C:/Users/Diniz/source/repos/Sat/projeto_barchart-master/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/Diniz/source/repos/Sat/projeto_barchart-master/build/CMakeFiles/ZERO_CHECK.dir
