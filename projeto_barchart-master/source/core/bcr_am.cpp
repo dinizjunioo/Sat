@@ -150,7 +150,7 @@ namespace bcra
         // Set the initial animation state.
         m_animation_state = ani_state_e::START;
 
-        std::ifstream file(m_opt.input_filename); // => data\\mossoro.txt m_opt.input_filename
+        std::ifstream file("data\\mossoro.txt"); // => data\\mossoro.txt m_opt.input_filename
         std::string str;
 
         if (!file.is_open()) {
@@ -168,7 +168,9 @@ namespace bcra
 
         getline(file, push_inicial_dates);
         m_barChart.fonte_date = push_inicial_dates;
-
+        getline(file, push_inicial_dates);
+        getline(file, push_inicial_dates);
+        num_linha_por_blocos = stoi(push_inicial_dates);
         contador_charts = 0;
 
         while (getline(file, str))
@@ -199,7 +201,7 @@ namespace bcra
                 }
                 else if (cores.size() >= 1)
                 {
-                    std::cout << files.back() << std::endl;
+                    //std::cout << files.back() << std::endl;
                     if (test_cor(cores, files.back())) {cores.push_back(files.back());}
                 }
             }
@@ -211,12 +213,9 @@ namespace bcra
         // perceba que o contador na vdd soma dois no if
         // e estou somando mais 1 pois existe o ultimo else a ser lido, logo tem mais 1 chart.
 
-         for (auto i : cores)
-            std::cout << i;
+         
 
-        std::cout << std::endl;
-
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < cores.size(); i++)
         {
             //std::cout << cores[i] << std::endl;
             //if (i >= 13)
@@ -227,15 +226,12 @@ namespace bcra
             
         }
         
-        std::cout << std::endl;
-
-         for (auto i : Pairs)
-            std::cout << i.first << i.second;
+        
 
         indice_time = 0;
         count_value = 0;
         m_barChart.time_stamp = files[indice_time];
-
+        
     }
 
 
@@ -261,7 +257,7 @@ namespace bcra
         }
         else if (m_animation_state == ani_state_e::RACING)
         {
-            // 
+          
         }
         else if (m_animation_state == ani_state_e::END)
         {
@@ -294,15 +290,16 @@ namespace bcra
             std::chrono::milliseconds  duration{ 1000 / m_opt.fps };
             std::this_thread::sleep_for(duration);
 
-            if ((indice_time + (5 * m_opt.n_bars))  < files.size())
+            if ((indice_time + (num_linha_por_blocos * 5))  < files.size())
             {
-                indice_time +=  (5* m_opt.n_bars);
+                indice_time +=  (num_linha_por_blocos * 5);
                 count_value += m_opt.n_bars;
                 m_barChart.time_stamp = files[indice_time];
             } else {
             m_animation_state = ani_state_e::END;
             }
 
+            
         }
         else if (m_animation_state == ani_state_e::END)
         {
@@ -340,25 +337,25 @@ namespace bcra
 
     void BCRAnimation::print_racing(void) const
     {
-        std::cout << Color::tcolor(m_barChart.main_title, Color::BLUE, Color::BOLD)  << "\n";
-        std::cout << "\n";
-        std::cout << "Time Stamp: " << Color::tcolor(m_barChart.time_stamp, Color::BLUE, Color::BOLD) << "\n\n";
+        std::cout << Color::tcolor(m_barChart.main_title, Color::BLUE, Color::BOLD)  << std::endl;
+        std::cout << std::endl;
+        std::cout << "Time Stamp: " << Color::tcolor(m_barChart.time_stamp, Color::BLUE, Color::BOLD) << std::endl;
 
         //
         int j = 70; // é um ma
         MID::const_iterator iter2 = Pairs.begin();
         for (auto i{ 0 }; i < Pairs.size(); ++i)
         {
-       
-            for (auto k { 0 }; k < j; ++k)
+
+            for (auto k{ 0 }; k < j; ++k)
             {
-                std::cout << iter2->second; 
-            }  
+                std::cout << iter2->second;
+            }
             std::cout << " " << m_barChart.bars[i + count_value].category << "[" << m_barChart.bars[i + count_value].value << "]\n\n";
             iter2++;
             j -= 5;
         }
-        std::cout <<  "\n";
+        std::cout << "\n";
         //
         std::cout << "+"; linha(90, '-'); std::cout << ">\n";
         std::cout << Color::tcolor(m_barChart.info_date, Color::BLUE, Color::BOLD) << "\n";
@@ -367,6 +364,7 @@ namespace bcra
         for (auto i : Pairs)
             std::cout << i.second << ": " << i.first << " ";
         std::cout << "\n\n";
+       
     }
 
     void BCRAnimation::print_welcome(void) const
@@ -389,7 +387,7 @@ namespace bcra
 
         
         for (auto i : Pairs)
-            std::cout << i.first; 
+            std::cout << i.first ; 
 
     }
 

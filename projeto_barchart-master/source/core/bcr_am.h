@@ -37,7 +37,7 @@ namespace bcra {
     struct Cfg {
         static constexpr short default_bars = 5;      //!< Default value for # of bars.
         static constexpr short max_bars = 15;         //!< Max number of bars allowed in the animation.
-        static constexpr short default_fps = 12;      //!< Default fps.
+        static constexpr short default_fps = 5;      //!< Default fps.
         static constexpr short max_fps = 45;          //!< Max fps allowed.
 
         static constexpr short max_bar_length = 50;   //!< Max bar length in characters units.
@@ -89,9 +89,11 @@ namespace bcra {
             short contador_charts;
             // na vdd eu n uso esse vector, eu uso o do barchart
             std::vector<std::string> files;
+            short num_linha_por_blocos;
             int indice_time;
             int count_value;
             std::string space = " ";
+            
         public:
             BCRAnimation();
             BCRAnimation( const BCRAnimation & _clone) = delete;
@@ -121,6 +123,8 @@ namespace bcra {
             void linha(int, char) const;
             bool test_cor(const std::vector<std::string>, const std::string);
             bool search_binary(std::vector<std::string>::iterator, std::vector<std::string>::iterator, const std::string);
+   
+       
     }; // BCRAnimation class.
     
 }
