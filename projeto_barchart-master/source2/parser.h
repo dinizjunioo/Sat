@@ -71,10 +71,12 @@ public:
     /// Default destructor
     ~Parser() = default;
     /// Turn off copy constructor. We do not need it.
-    Parser(const Parser&) = delete;  // Construtor cópia.
+    Parser(const Parser&) = delete;  // Construtor cï¿½pia.
     /// Turn off assignment operator.
-    Parser& operator=(const Parser&) = delete; // Atribuição.
+    Parser& operator=(const Parser&) = delete; // Atribuiï¿½ï¿½o.
 
+    void get_expression(std::string, char);
+    
 private:
     /// Terminal symbols table
     enum class term_symb_t {  // The symbols:-

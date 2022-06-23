@@ -2,8 +2,13 @@
 #include <iomanip>
 #include <vector>
 
+#include <algorithm>
+using std::copy;
+
+#include <iterator>
+
 #include "parser.h"
-//#include "tokenizer.h"
+#include "Tokenizer.h"
 #include "Evaluator.h"
 
 void print_parser_err_msg(const Parser::ResultType& result, const std::string& str) {
@@ -63,23 +68,31 @@ int main()
 
         if (parser_result.type != Parser::ResultType::OK)
         {
-            //print_parser_err_msg(parser_result); // falta um argumento que é onde está o error! (opcional)
+            //print_parser_err_msg(parser_result); // falta um argumento que ï¿½ onde estï¿½ o error! (opcional)
             continue;
         }
         //std::cout << ">>> Expression SUCESSFULLY parsed! \n";
 
-        char unary_minus;
+        //char unary_minus;
 
-        parser.get_expression(expression, unary_minus);
+        //parser.get_expression(expression, unary_minus);
 
-        auto token_list = tokenize(expression, unary_minus);
+        simpleparser::Tokenizer token;
 
-        /*
+        auto token_list = token.tokenize(expression); //unary_minus
+
+        
         std::cout << ">>> tokens: { ";
-        std::copy(token_list.begin(), token_list.end(), std::ostream_iterator<Token>(std::cout, " "));
+        copy(
+            token_list.begin(), 
+            token_list.end(), 
+            std::ostream_iterator<simpleparser::Tokenizer>(std::cout, " ")
+            );
+
         std::cout << "}\n";
         std::cout << std::endl;
-        */
+        
+        /*
 
         auto evaluate_result = evaluator.evaluate(token_list);
 
@@ -90,6 +103,7 @@ int main()
         }
 
         std::cout << evaluate_result.value << std::endl;
+        */
 
         expression.clear();
     }
